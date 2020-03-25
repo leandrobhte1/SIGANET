@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 
-import axios from 'axios'
-const BASE_URL = 'http://localhost:3011/api'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import { createTicket } from './guicheActions'
 
-export default class GuicheHeader extends Component {
+class GuicheHeader extends Component {
 
     constructor(props) {
         super(props)
@@ -14,7 +15,7 @@ export default class GuicheHeader extends Component {
         return (
             <div className="guicheHeader">
                 <div className="senhaChamada">
-                    <h2>32</h2>
+                    <h2>{this.props.guiche.senhaAtendimento}</h2>
                 </div>
                 <div className="boxInfoGuiche firstBoxInfoGuiche">
                     <span className="titleGuicherHeader">Comum</span>
@@ -44,3 +45,9 @@ export default class GuicheHeader extends Component {
         )
     }
 }
+
+const mapStateToProps = state => ({guiche: state.guiche})
+
+const mapDispatchToProps = dispatch => bindActionCreators({ createTicket }, dispatch)
+
+export default connect(mapStateToProps, mapDispatchToProps)(GuicheHeader)

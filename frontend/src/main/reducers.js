@@ -4,11 +4,13 @@ import { reducer as toastrReducer } from 'react-redux-toastr'
 
 
 import commonReducer from '../common/commonReducer'
+import guicheReducer from '../guiche/guicheReducer'
 
 const rootReducer = combineReducers({
     form: formReducer,
     toastr: toastrReducer,
-    common: commonReducer
+    common: commonReducer,
+    guiche: guicheReducer
 })
 
 export default rootReducer
