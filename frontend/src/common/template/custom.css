@@ -11,3 +11,474 @@ button{
 .table-actions{
     width: 150px;
 }
+
+.skin-blue .main-header .navbar{
+    background-color: #ffffff !important;
+}
+
+.logo{
+    background-color: #ffffff !important;
+    border-right: 1px solid rgba(0, 0, 0, .0625);
+}
+
+.leftNav {
+    display: flex;
+    flex-direction: row;
+}
+
+.lastItemInfoUser{
+    border-bottom: 1px solid rgba(0, 0, 0, .0625) !important;
+    padding-bottom: 10px;
+}
+
+.listInfoUser{
+    position: absolute;
+    top: 88%;
+    left: 83%;
+    background-color: white;
+    padding: 10px;
+    list-style: none;
+    border: 2px solid rgba(0, 0, 0, .0625) !important;
+}
+
+b, .company{
+    color: #000000 !important;
+}
+
+.company{
+    font-size: 12px;
+    margin-top: -30px;
+}
+
+.main-header .logo{
+    height: 60px !important;
+}
+
+.namesLogo{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+.logo-lg{
+    display: flex !important;
+    align-items: center !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+}
+
+.main-header .logo .logo-lg{
+    display: flex !important;
+    align-items: center !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+}
+
+.logo{
+    border-bottom: 1px solid rgba(0, 0, 0, .0625);
+    border-right: 1px solid rgba(0, 0, 0, .0625);
+}
+
+.skin-blue .main-header .logo{
+    border-bottom: 1px solid rgba(0, 0, 0, .0625);
+}
+
+.sidebar-menu{
+    margin-top: 20px !important;
+}
+
+.skin-blue .main-header .navbar .sidebar-toggle{
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+.skin-blue .main-header .navbar .sidebar-toggle:hover{
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+.main-sidebar{
+    background-color: #ffffff !important;
+}
+
+.logo-mini{
+    padding-top: 15px;
+}
+
+.product{
+    color: #313435 !important;
+    font-size: 1.53125rem;
+}
+
+.company{
+    color: #7c8695 !important
+}
+
+.skin-blue .sidebar a{
+    color: #000000 !important;
+}
+
+.skin-blue .sidebar a:hover{
+    color: #000000 !important;
+}
+
+.searchIcon{
+    font-size: 1.5em !important;
+    padding-top: 15px !important;
+}
+
+.bellIcon, .userIcon{
+    margin-right: 10px !important;
+}
+
+.mailIcon{
+    margin-right: 20px !important;
+}
+
+.rightNav{
+    padding-top: 15px !important;
+    display: flex !important;
+}
+
+.divSearchHeader{
+    display: flex !important;
+    flex-direction: row !important;
+}
+
+.searchInput{
+    max-height: 30px !important;
+    align-items: center !important;
+    align-self: center !important;
+    color: grey !important;
+    border: none !important;
+    font-size: 1.2em !important;
+    font-weight: 100 !important;
+    margin-top: 2px !important;
+}
+
+.searchInput:focus{
+    outline: none !important;
+}
+
+.content-wrapper, .right-side{
+    background-color: #f2f3f5 !important;
+}
+
+.sidebar-menu>li:hover{
+    background-color: #f2f3f5 !important;
+}
+
+.MenuItemList:hover{
+    background-color: #f2f3f5 !important;
+}
+
+.guicheHeader{
+    margin-top: 20px !important;
+    height: 60px;
+    background-color: #ffffff;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.senhaChamada{
+    background-color: #009688;
+    width: 60px;
+    height: 45px;
+    padding: 10px;
+    color: #ffffff;
+    align-items: center;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.boxInfoGuiche{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 200px;
+    border-right: 1px solid rgba(0, 0, 0, .0625);
+}
+
+.titleGuicherHeader{
+    font-weight: 600 !important;
+    color: #72777a;
+    display: flex;
+    justify-content: center;
+}
+
+.subtitleGuicheHeader{
+    font-weight: 400 !important;
+    color: #72777a;
+    display: flex;
+    font-size: .7rem !important;
+    justify-content: center;
+}
+
+.guicheInfo{
+    background-color: #ffffff;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.guicheInfoTop{
+    display: flex;
+    flex-direction: row;
+}
+
+.guicheInfoTopLeft {
+    display: flex;
+    flex-direction: column;
+    padding-right: 40px;
+}
+
+.lineRow{
+    border-bottom: 1px solid rgba(0, 0, 0, .0625);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.guicheInfoTopLeftFirst{
+    width: 100%;
+}
+
+.guicheInfoTopLeft{
+    width: 80%;
+}
+
+.guicheInfoTopRight{
+    width: 20%;
+}
+
+.guicheSideButtonList{
+    list-style: none;
+    width: 100%;
+    padding-left: 0px;
+}
+
+.guicheSideButtonList button{
+    width: 100%;
+    background-color: #7c8695;
+    border: none;
+    color: #ffffff;
+    border-radius: 5px;
+    min-height: 50px;
+}
+
+.guicheSideButtonList button:hover{
+    background-color: #3bb3a0;
+    color: #fff;
+}
+
+.guicheSideButtonListItem{
+    margin-bottom: 3px;
+}
+
+.skin-blue .sidebar-menu > li:hover > a, .skin-blue .sidebar-menu > li.active > a{
+    background: #f2f3f5 !important;
+}
+
+.MenuItemList span:hover{
+    color: #000000 !important;
+}
+
+.MenuItemList span{
+    margin-left: 15px !important;
+}
+
+.lineInfo{
+    color: #72777a;
+}
+
+.guicheCliente{
+    font-size: 1.4rem !important;
+}
+
+.lineResp{
+    color: #565a5c !important;
+    font-weight: 600 !important;
+    font-size: 1rem;
+}
+
+.guicheInfoTable{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.guicheInfoTableHeader{
+    border-top: 1px solid rgba(0, 0, 0, .0625);
+    border-bottom: 1px solid rgba(0, 0, 0, .0625);
+    color: #565a5c !important;
+}
+
+.guicheInfoTableHeaderItem{
+    color: #72777a !important;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: 600;
+}
+
+.guicheInfoTableRow{
+    border-bottom: 1px solid rgba(0, 0, 0, .0625);
+}
+
+.guicheInfoTableRow td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.guicheButtons{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.guicheButtonsBottom{
+    flex-basis: 19.8%;
+    margin-bottom: 5px;
+    min-width: 200px;
+    color: #ffffff;
+    background-color: #3f7555;
+    min-height:60px;
+    border: none;
+    margin-right: 2px;
+    border-radius: 5px;
+}
+
+.guicheButtonsBottom:hover{
+    background-color: #3bb3a0;
+}
+
+.guicheButtonsBottom.disabled{
+    background-color: #d3d3d3!important;
+}
+
+.main-header-mobile{
+    display: none;
+}
+
+.logoMobile{
+    display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    .main-header-desktop{
+        display: none;
+    }
+
+    .logoMobile{
+        display: block !important;
+    }
+
+    .main-header-mobile{
+        display: block;
+    }
+
+    .navbar .navbar-static-top{
+        display: flex !important;
+    }
+
+    nav{
+        display: flex !important;
+    }
+
+    .content-wrapper{
+        padding-top: 30px !important;
+    }
+
+    .main-sidebar{
+        padding-top: 60px !important;
+    }
+
+    .company{
+        font-size: 12px;
+        margin-top: -20px;
+    }
+
+    .guicheInfoTop{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .guicheInfoTopLeft{
+        width: 100%;
+        padding-right: 0px;
+    }
+
+    .guicheInfoTopRight{
+        width: 100%;
+    }
+
+    .guicheInfoTableRow td{
+        padding-right: 20px;
+    }
+
+    .guicheHeader{
+        margin-top: 20px !important;
+        height: 270px;
+        background-color: #ffffff;
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .boxInfoGuiche{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        max-width: 200px;
+        border-right: 1px solid rgba(0, 0, 0, .0625);
+        flex-wrap: wrap;
+        flex-basis: 50%;
+    }
+
+    .firstBoxInfoGuiche{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        max-width: 200px;
+        border-right: 1px solid rgba(0, 0, 0, .0625);
+        flex-wrap: wrap;
+        flex-basis: 32% !important;
+    }
+
+    .titleGuicherHeader{
+        text-align: center;
+    }
+
+    .guicheButtonsBottom{
+        flex-basis: 48.8%;
+        margin-bottom: 5px;
+        min-width: 60px;
+        color: #ffffff;
+        background-color: #3f7555;
+        min-height: 60px;
+        border: none;
+        margin-right: 2px;
+        border-radius: 5px;
+    }
+
+    .logo{
+        display: none !important;
+    }
+}
+
