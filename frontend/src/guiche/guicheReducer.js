@@ -1,9 +1,13 @@
-const INITIAL_STATE = { emAtendimento: false, senhaAtendimento: 0, senhasCriadas: 0, proximaSenha: 1, senhaAtual: 0, atendente: 'Zamur Borges', cliente: 'NENHUM CLIENTE ENCONTRADO', secao: 'Atendimento', guiche: 'Guichê:02', status: 'SEM SENHAS NA FILA', fila: 0, senhasFila: []}
+const INITIAL_STATE = { emAtendimento: false, senhaCongelada: false, senhaAtendimento: 0, senhasCriadas: 0, proximaSenha: 1, senhaAtual: 0, atendente: 'Zamur Borges', cliente: 'NENHUM CLIENTE ENCONTRADO', secao: 'Atendimento', guiche: 'Guichê:02', status: 'SEM SENHAS NA FILA', fila: 0, senhasFila: []}
 
 export default function(state = INITIAL_STATE, action) {
     switch (action.type) {
         case 'ATENDENTE_CHANGED':
             return { ...state, atendente: action.payload }
+        case 'UNFREEZE_TICKET':
+            return { ...state, senhaCongelada: action.payload}
+        case 'FREEZE_TICKET':
+            return { ...state, senhaCongelada: action.payload}
         case 'EM_ATENDIMENTO_CHANGED':
             return { ...state, emAtendimento: action.payload }
         case 'TICKET_ROW_CHANGED':

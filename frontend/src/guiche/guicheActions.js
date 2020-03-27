@@ -64,6 +64,27 @@ export let endTicket = (fila) => {
         { type: 'EM_ATENDIMENTO_CHANGED', payload: emAtendimento }]
 }
 
+export let unfreezeTicket = (senhaAtendimento) => {
+    let status = 'SENHA DESCONGELADA';
+    let congelada = false;
+    emAtendimento = true;
+
+    return [{ type: 'STATUS_CHANGED', payload: status },
+        { type: 'EM_ATENDIMENTO_CHANGED', payload: emAtendimento },
+        { type: 'UNFREEZE_TICKET', payload: congelada }]
+}
+
+export let freezeTicket = (senhaAtendimento) => {
+
+    let status = 'SENHA CONGELADA';
+    emAtendimento = false;
+    let congelada = true;
+
+    return [{ type: 'STATUS_CHANGED', payload: status },
+        { type: 'EM_ATENDIMENTO_CHANGED', payload: emAtendimento },
+        { type: 'FREEZE_TICKET', payload: congelada }]
+}
+
 export let createTicket = (senhaAtual, fila) => {
 
     filaSenhas = filaSenhas + 1;
