@@ -27,11 +27,15 @@ class GuicheButtons extends Component {
     }
 
     render() {
+        console.log("em atendimento.: ", this.props.guiche.emAtendimento);
+        let habilitaIniciarAtendimento = ((this.props.guiche.fila >= 1 && this.props.guiche.emAtendimento == false) || this.props.guiche.emAtendimento == true) ? true : false;
+        console.log("habilita? ",habilitaIniciarAtendimento);
+        let habilitaFinalizarAtendimento = (this.props.guiche.emAtendimento == true && this.props.guiche.fila > 0) ? true : false;
         return (
             <div className="guicheButtons">
                 <button onClick={() => this.criaSenha()} className='guicheButtonsBottom'>Cria senha</button>
-                <button onClick={() => this.iniciaAtendimento()} className={`guicheButtonsBottom ${this.props.guiche.fila == 0 ? 'disabled' : ''}`}>Inicia atendimento</button>
-                <button onClick={() => this.finalizaAtendimento()} className={`guicheButtonsBottom ${this.props.guiche.fila == 0 ? 'disabled' : ''} ${this.props.guiche.senhaAtual != this.props.guiche.senhaAtendimento ? 'disabled' : ''}`}>Finaliza atendimento</button>
+                <button onClick={() => this.iniciaAtendimento()} disabled={`${habilitaIniciarAtendimento == true ? '' : 'disabled'}`} className={`guicheButtonsBottom ${habilitaIniciarAtendimento == true ? '' : 'disabled'}`}>Inicia atendimento</button>
+                <button onClick={() => this.finalizaAtendimento()} disabled={`${habilitaFinalizarAtendimento == true ? '' : 'disabled'}`} className={`guicheButtonsBottom ${habilitaFinalizarAtendimento == true ? '' : 'disabled'}`}>Finaliza atendimento</button>
                 <button className={`guicheButtonsBottom ${this.props.guiche.fila == 0 ? 'disabled' : ''}`}>Rechama senha</button>
                 <button className={`guicheButtonsBottom ${this.props.guiche.fila == 0 ? 'disabled' : ''}`}>Congela senha</button>
                 <button className={`guicheButtonsBottom ${this.props.guiche.fila == 0 ? 'disabled' : ''}`}>Descongela senha</button>

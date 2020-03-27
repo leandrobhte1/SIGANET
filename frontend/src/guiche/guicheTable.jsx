@@ -4,9 +4,11 @@ export default props => (
     <div className="lineRow">
         <table className="guicheInfoTable">
                                 <thead className="guicheInfoTableHeader">
-                                    <th className="guicheInfoTableHeaderItem">Atividade</th>
-                                    <th className="guicheInfoTableHeaderItem">Serviço</th>
-                                    <th className="guicheInfoTableHeaderItem">Seção</th>
+                                    <tr>
+                                        <th className="guicheInfoTableHeaderItem">Atividade</th>
+                                        <th className="guicheInfoTableHeaderItem">Serviço</th>
+                                        <th className="guicheInfoTableHeaderItem">Seção</th>
+                                    </tr>
                                 </thead>
                                 <tbody>
                                     <tr className='guicheInfoTableRow'>

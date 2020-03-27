@@ -486,3 +486,9 @@ b, .company{
 .habilita{
     background-color: #3f7555 !important;
 }
+
+@media only screen and (max-width: 700px) {
+    .guicheCliente{
+        font-size: 1rem !important;
+    }
+  }
