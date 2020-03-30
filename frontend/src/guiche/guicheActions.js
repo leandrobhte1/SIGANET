@@ -43,7 +43,7 @@ export let initTicket = (senhaAtendimento, senhaAtual) => {
 }
 
 export let cancelTicket = (senhaAtendimento, senhaAtual) => {
-    if(senhaAtendimento == senhaAtual && senhaAtual != 0){
+    if(senhaAtendimento != undefined && senhaAtual != 0){
         let request = 'SENHA CANCELADA';
         return [{ type: 'STATUS_CHANGED', payload: request }]
     }

@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 
-import { Button, Header, Image, Modal } from 'semantic-ui-react'
+import { Button, Header, Image, Modal, Icon } from 'semantic-ui-react'
 
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { createTicket, initTicket, endTicket, cancelTicket, freezeTicket, unfreezeTicket } from './guicheActions'
+
+import { showHideModal } from '../common/commonActions'
 
 class GuicheButtons extends Component {
 
@@ -36,8 +38,25 @@ class GuicheButtons extends Component {
         this.props.unfreezeTicket(this.props.guiche.senhaAtendimento);
     }
 
-    mostrarSenhasFila() {
+    renderRows() {
 
+        if(this.props.guiche.senhasFila.length == 0){
+            return (
+                <span>Sem senhas na fila!</span>
+            )
+        }
+
+        return this.props.guiche.senhasFila.map(senha => (
+            <span key={senha}>{senha}, </span>
+        ))
+    }
+
+    openModal(){
+        this.props.showHideModal();
+    }
+
+    closeModal(){
+        this.props.showHideModal();
     }
 
     render() {
@@ -45,7 +64,6 @@ class GuicheButtons extends Component {
 
         let habilitaFinalizarAtendimento = (this.props.guiche.emAtendimento == true && this.props.guiche.fila > 0) ? true : false;
 
-        console.log("senhasFilaaa.: ",this.props.guiche.senhasFila)
         return (
             <div className="guicheButtons">
                 <button onClick={() => this.criaSenha()} className='guicheButtonsBottom'>Cria senha</button>
@@ -57,7 +75,7 @@ class GuicheButtons extends Component {
                 <button onClick={() => this.cancelarSenha()} className={`guicheButtonsBottom ${this.props.guiche.fila == 0 ? 'disabled' : ''}`}>Cancela senha</button>
                 <button className='guicheButtonsBottom'>Transfere mesa</button>
                 <button className='guicheButtonsBottom'>Solicita apoio</button>
-                <button onClick={() => this.mostrarSenhasFila()} className='guicheButtonsBottom'>Senhas na fila</button>            
+                <button onClick={() => this.openModal()} className='guicheButtonsBottom'>Senhas na fila</button>            
                 <button className='guicheButtonsBottom disabled' disabled>Outra ação</button>
                 <button className='guicheButtonsBottom disabled' disabled>Outra ação</button>
                 <button className='guicheButtonsBottom disabled' disabled>Outra ação</button>
@@ -69,13 +87,20 @@ class GuicheButtons extends Component {
                 <button className='guicheButtonsBottom disabled' disabled>Outra ação</button>
                 <button className='guicheButtonsBottom disabled' disabled>Outra ação</button>
                 <button className='guicheButtonsBottom disabled' disabled>Outra ação</button>
+
+                <div className={`senhasFilaModal ${this.props.common.showModal ? 'd-block' : 'd-none'}`}>
+                    <Icon onClick={() => this.closeModal()} name='close' ></Icon>
+                    <h3>Senhas na fila:</h3>
+                    <p>{this.renderRows()}</p>
+                </div>
+
             </div>
         )
     }
 }
     
-const mapStateToProps = state => ({guiche: state.guiche})
+const mapStateToProps = state => ({guiche: state.guiche, common: state.common})
 
-const mapDispatchToProps = dispatch => bindActionCreators({ createTicket, initTicket, endTicket, cancelTicket, freezeTicket, unfreezeTicket }, dispatch)
+const mapDispatchToProps = dispatch => bindActionCreators({showHideModal, createTicket, initTicket, endTicket, cancelTicket, freezeTicket, unfreezeTicket }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(GuicheButtons)

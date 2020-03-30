@@ -9,7 +9,6 @@ import Messages from '../common/msg/messages'
 
 import Routes from './routes'
 
-
 export default props => (
     <div className="wrapper">
         <Header></Header>

@@ -1,18 +1,20 @@
 import React, { Component } from 'react'
 
+import GuicheButtonItem from './guicheSideButtonItemList'
+
 export default class GuicheSideButton extends Component {
 
     render() {
         return (
             <div className="guicheSideButton">
                 <ul className="guicheSideButtonList">
-                    <li className="guicheSideButtonListItem"> <button> Adicionar Atividade </button> </li>
-                    <li className="guicheSideButtonListItem"> <button> Remove atividade </button> </li>
-                    <li className="guicheSideButtonListItem"> <button> Alterar serviço </button> </li>
-                    <li className="guicheSideButtonListItem"> <button> Alterar Prioridade </button> </li>
-                    <li className="guicheSideButtonListItem"> <button> Alterar Categoria </button> </li>
-                    <li className="guicheSideButtonListItem"> <button> Adicionar Cidadão </button> </li>
-                    <li className="guicheSideButtonListItem"> <button> Comentário </button> </li>
+                    <GuicheButtonItem buttonText='Adicionar Atividade'></GuicheButtonItem>
+                    <GuicheButtonItem buttonText='Remove Atividade'></GuicheButtonItem>
+                    <GuicheButtonItem buttonText='Alterar Serviço'></GuicheButtonItem>
+                    <GuicheButtonItem buttonText='Alterar Prioridade'></GuicheButtonItem>
+                    <GuicheButtonItem buttonText='Alterar Categoria'></GuicheButtonItem>
+                    <GuicheButtonItem buttonText='Adicionar Cidadão'></GuicheButtonItem>
+                    <GuicheButtonItem buttonText='Comentário'></GuicheButtonItem>
                 </ul>
             </div>
         )

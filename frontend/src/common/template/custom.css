@@ -212,6 +212,7 @@ b, .company{
     color: #72777a;
     display: flex;
     justify-content: center;
+    font-size: 13px !important;
 }
 
 .subtitleGuicheHeader{
@@ -343,9 +344,9 @@ b, .company{
 }
 
 .guicheButtonsBottom{
-    flex-basis: 19.8%;
+    flex-basis: 19.7%;
     margin-bottom: 5px;
-    min-width: 200px;
+    min-width: 190px;
     color: #ffffff;
     background-color: #3f7555;
     min-height:60px;
@@ -458,7 +459,7 @@ b, .company{
         max-width: 200px;
         border-right: 1px solid rgba(0, 0, 0, .0625);
         flex-wrap: wrap;
-        flex-basis: 32% !important;
+        flex-basis: 32.7% !important;
     }
 
     .titleGuicherHeader{
@@ -492,3 +493,48 @@ b, .company{
         font-size: 1rem !important;
     }
   }
+
+
+  .red{
+      color: red !important;
+  }
+
+  .blue{
+      color: blue !important;
+  }
+
+  .f14px{
+      font-size: 14px !important;
+  }
+
+  .f16px{
+    font-size: 16px !important;
+}
+
+.f24px{
+    font-size: 24px !important;
+}
+
+.d-none{
+    display: none;
+}
+
+.d-block{
+    display: block;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.senhasFilaModal{
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, .0625);
+    height: 200px;
+    width: 500px;
+    position: absolute;
+    top: 37%;
+    left: 40%;
+    padding: 20px;
+}

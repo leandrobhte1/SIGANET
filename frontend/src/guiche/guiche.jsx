@@ -12,10 +12,8 @@ export default class Guiche extends Component {
     }
 
     render() {
-        // const { credit, debt } = this.state
         return (
             <div>
-                {/* <ContentHeader title='SIGANET' small='Versão 1.0'></ContentHeader> */}
                 <Content>
                     <GuicheHeader></GuicheHeader>
                     <GuicheInfo></GuicheInfo>
