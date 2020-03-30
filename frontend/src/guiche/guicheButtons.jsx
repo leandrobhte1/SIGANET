@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import { Button, Header, Image, Modal } from 'semantic-ui-react'
+
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { createTicket, initTicket, endTicket, cancelTicket, freezeTicket, unfreezeTicket } from './guicheActions'
@@ -34,11 +36,16 @@ class GuicheButtons extends Component {
         this.props.unfreezeTicket(this.props.guiche.senhaAtendimento);
     }
 
+    mostrarSenhasFila() {
+
+    }
+
     render() {
         let habilitaIniciarAtendimento = ((this.props.guiche.fila >= 1 && this.props.guiche.emAtendimento == false) || this.props.guiche.emAtendimento == true) ? true : false;
 
         let habilitaFinalizarAtendimento = (this.props.guiche.emAtendimento == true && this.props.guiche.fila > 0) ? true : false;
 
+        console.log("senhasFilaaa.: ",this.props.guiche.senhasFila)
         return (
             <div className="guicheButtons">
                 <button onClick={() => this.criaSenha()} className='guicheButtonsBottom'>Cria senha</button>
@@ -50,7 +57,7 @@ class GuicheButtons extends Component {
                 <button onClick={() => this.cancelarSenha()} className={`guicheButtonsBottom ${this.props.guiche.fila == 0 ? 'disabled' : ''}`}>Cancela senha</button>
                 <button className='guicheButtonsBottom'>Transfere mesa</button>
                 <button className='guicheButtonsBottom'>Solicita apoio</button>
-                <button className='guicheButtonsBottom'>Senhas na fila</button>
+                <button onClick={() => this.mostrarSenhasFila()} className='guicheButtonsBottom'>Senhas na fila</button>            
                 <button className='guicheButtonsBottom disabled' disabled>Outra ação</button>
                 <button className='guicheButtonsBottom disabled' disabled>Outra ação</button>
                 <button className='guicheButtonsBottom disabled' disabled>Outra ação</button>
