@@ -14,7 +14,6 @@ let emAtendimento = false;
 
 export function showSearchBar() {
     showSearch = !showSearch;
-    console.log("value.: ",showSearch);
     let request = showSearch;
     return {
         type: 'SHOW_SEARCH_BAR_CHANGED',
@@ -74,15 +73,23 @@ export let unfreezeTicket = (senhaAtendimento) => {
         { type: 'UNFREEZE_TICKET', payload: congelada }]
 }
 
-export let freezeTicket = (senhaAtendimento) => {
+export let freezeTicket = (senhaAtendimento, senhaAtual) => {
 
     let status = 'SENHA CONGELADA';
     emAtendimento = false;
     let congelada = true;
+    filaSenhas = filaSenhas + 1;
+    senhasFila.push(senhaAtendimento);
+    let novaSenhaAtual = senhaAtual + 1;
+
+    
 
     return [{ type: 'STATUS_CHANGED', payload: status },
         { type: 'EM_ATENDIMENTO_CHANGED', payload: emAtendimento },
-        { type: 'FREEZE_TICKET', payload: congelada }]
+        { type: 'FREEZE_TICKET', payload: congelada },
+        { type: 'TICKET_ROW_CHANGED', payload: senhasFila },
+        { type: 'TICKET_CHANGED', payload: novaSenhaAtual },
+        { type: 'CONT_TICKET', payload: filaSenhas }]
 }
 
 export let createTicket = (senhaAtual, fila) => {

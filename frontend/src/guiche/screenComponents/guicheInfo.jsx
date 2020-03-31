@@ -7,9 +7,8 @@ import GuicheButtons from './guicheButtons'
 
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { atendente  } from './guicheActions'
+import { atendente  } from '../guicheActions'
 
-import Timer from './timer'
 
 class GuicheInfo extends Component {
 

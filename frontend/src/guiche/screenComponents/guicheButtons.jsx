@@ -4,9 +4,9 @@ import { Button, Header, Image, Modal, Icon } from 'semantic-ui-react'
 
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { createTicket, initTicket, endTicket, cancelTicket, freezeTicket, unfreezeTicket } from './guicheActions'
+import { createTicket, initTicket, endTicket, cancelTicket, freezeTicket, unfreezeTicket } from '../guicheActions'
 
-import { showHideModal } from '../common/commonActions'
+import { showHideModal } from '../../common/commonActions'
 
 class GuicheButtons extends Component {
 
@@ -31,7 +31,7 @@ class GuicheButtons extends Component {
     }
 
     congelaSenha() {
-        this.props.freezeTicket(this.props.guiche.senhaAtendimento);
+        this.props.freezeTicket(this.props.guiche.senhaAtendimento, this.props.guiche.senhaAtual);
     }
 
     descongelaSenha() {

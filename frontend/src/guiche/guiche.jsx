@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 
-import ContentHeader from '../common/template/contentHeader'
 import Content from '../common/template/content'
-import GuicheHeader from './guicheHeader'
-import GuicheInfo from './guicheInfo'
+import GuicheHeader from './screenComponents/guicheHeader'
+import GuicheInfo from './screenComponents/guicheInfo'
 
 export default class Guiche extends Component {
 

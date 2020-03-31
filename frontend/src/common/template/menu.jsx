@@ -9,7 +9,7 @@ export default props => (
         <MenuItem path='#' label='Guichê' color='blue' icon='desktop'></MenuItem>
         <MenuItem path='#' label='Ajuda' color='grey' icon='help'></MenuItem>
         {/* <MenuTree label='Cadastro' icon='edit'>
-            <MenuItem path='#billingCycles' label='Ciclos de Pagamentos' icon='usd'></MenuItem>
+            <MenuItem path='#users' label='Cadastro de usuarios' icon='user'></MenuItem>
         </MenuTree> */}
     </ul>
 )
